@@ -21,6 +21,5 @@ services:
             file: jhipster-registry.yml
             service: jhipster-registry
         environment:
-            - _JAVA_OPTIONS=-Xmx256m
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS=file:./central-config/docker-config/

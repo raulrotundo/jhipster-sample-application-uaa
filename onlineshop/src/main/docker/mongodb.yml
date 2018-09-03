@@ -1,0 +1,8 @@
+version: '2'
+services:
+    onlineshop-mongodb:
+        image: mongo:3.6.3
+        ports:
+            - "27018:27018"
+        volumes:
+            - ~/volumes/jhipster/onlineshop/mongodb/:/data/db/

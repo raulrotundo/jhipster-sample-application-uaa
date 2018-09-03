@@ -1,0 +1,29 @@
+
+{
+    "gatewayApp": {
+        "onlineshopCustomer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Crear nuevo Customer",
+                "createOrEditLabel": "Crear o editar Customer"
+            },
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "telephone": "Telephone"
+        }
+    },
+    "onlineshopApp": {
+        "onlineshopCustomer" : {
+            "created": "Un nuevo Customer ha sido creado con el identificador {{ param }}",
+            "updated": "Un Customer ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Customer ha sido eliminado con el identificador {{ param }}"
+        }
+    }
+}

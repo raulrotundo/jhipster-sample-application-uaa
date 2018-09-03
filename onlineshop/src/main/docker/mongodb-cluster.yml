@@ -1,0 +1,16 @@
+version: '2'
+services:
+    onlineshop-mongodb:
+        image: mongo:3.2.10
+        ports:
+            - "27018:27018"
+        command: mongos --configdb onlineshop-mongodb-config
+    onlineshop-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    onlineshop-mongodb-config:
+        image: mongo:3.2.10
+        container_name: onlineshop-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

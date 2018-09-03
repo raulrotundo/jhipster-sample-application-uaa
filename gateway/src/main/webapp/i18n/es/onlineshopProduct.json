@@ -1,0 +1,31 @@
+
+{
+    "gatewayApp": {
+        "onlineshopProduct" : {
+            "home": {
+                "title": "Products",
+                "createLabel": "Crear nuevo Product",
+                "createOrEditLabel": "Crear o editar Product"
+            },
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Product"
+            },
+            "title": "Title",
+            "keywords": "Keywords",
+            "description": "Description",
+            "rating": "Rating",
+            "dateAdded": "Date Added",
+            "dateModified": "Date Modified"
+        }
+    },
+    "onlineshopApp": {
+        "onlineshopProduct" : {
+            "created": "Un nuevo Product ha sido creado con el identificador {{ param }}",
+            "updated": "Un Product ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Product ha sido eliminado con el identificador {{ param }}"
+        }
+    }
+}

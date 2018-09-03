@@ -1,0 +1,30 @@
+
+{
+    "gatewayApp": {
+        "onlineshopCategory" : {
+            "home": {
+                "title": "Categories",
+                "createLabel": "Create a new Category",
+                "createOrEditLabel": "Create or edit a Category"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Category"
+            },
+            "description": "Description",
+            "sortOrder": "Sort Order",
+            "dateAdded": "Date Added",
+            "dateModified": "Date Modified",
+            "status": "Status"
+        }
+    },
+    "onlineshopApp": {
+        "onlineshopCategory" : {
+            "created": "A new Category is created with identifier {{ param }}",
+            "updated": "A Category is updated with identifier {{ param }}",
+            "deleted": "A Category is deleted with identifier {{ param }}"
+        }
+    }
+}

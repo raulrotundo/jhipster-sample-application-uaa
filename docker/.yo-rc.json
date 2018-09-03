@@ -8,9 +8,12 @@
     "directoryPath": "../",
     "gatewayType": "zuul",
     "clusteredDbApps": [],
-    "monitoring": "no",
+    "monitoring": "elk",
     "serviceDiscoveryType": "eureka",
     "adminPassword": "admin",
-    "jwtSecretKey": "02fcbfe794e8124e4581d38f8c712cf4f9b13e15"
+    "jwtSecretKey": "02fcbfe794e8124e4581d38f8c712cf4f9b13e15",
+    "consoleOptions": [
+      "zipkin"
+    ]
   }
 }

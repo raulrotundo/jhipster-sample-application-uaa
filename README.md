@@ -42,6 +42,13 @@ To stop them:
 
     docker-compose -f docker-compose.<dev or prod>.yml down
 
+This project has also available a Spring Cloud Configuration repository in order to have a central place to manage all our external properties across all environments.
+
+Using the dev profile will run the JHipster Registry with the dev and the composite profiles. The dev profile will load the Spring Cloud configuration from the filesystem, looking for the central-config directory, which is relative to the running directory, defined in docker/jhipster-registry.dev.yml file.
+
+Using the prod profile will run the JHipster Registry with the prod and the composite profiles. The prod profile will load the Spring Cloud configuration from a Git repository, which is https://github.com/raulrotundo/jhipster-registry-config.
+
+
 Endpoints are available in the following addresses:
 
 Jhipster Registry:

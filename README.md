@@ -74,4 +74,5 @@ http://localhost:8080
 Actuators:
 
 POST: http://<IP>:<Port>/management/refresh
+
 GET: http://<IP>:<Port>/management/"configprops", "env", "health", "info", "threaddump"

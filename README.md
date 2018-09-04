@@ -36,7 +36,11 @@ Build all images using the folowing command
 
 Go to docker folder and run
 
-    docker-compose up -d
+    docker-compose -f docker-compose.<dev or prod>.yml up -d
+
+To stop them:
+
+    docker-compose -f docker-compose.<dev or prod>.yml down
 
 Endpoints are available in the following addresses:
 

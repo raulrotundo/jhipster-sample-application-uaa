@@ -48,8 +48,20 @@ Using the dev profile will run the JHipster Registry with the dev and the compos
 
 Using the prod profile will run the JHipster Registry with the prod and the composite profiles. The prod profile will load the Spring Cloud configuration from a Git repository, which is https://github.com/raulrotundo/jhipster-registry-config.
 
+## Spring Cloud Config server
 
-Endpoints are available in the following addresses:
+The JHipster Registry is a Spring Config Server: when applications are launched they will first connect to the JHipster Registry to get their configuration. This is true for both gateways and microservices.
+
+This configuration is a Spring Boot configuration, like the one found in the JHipster application-*.yml files, but it is stored in a central server, so it is easier to manage.
+
+On startup, your gateways and microservices app will query the Registry’s config server and overwrite their local properties with the ones defined there.
+
+To update some properties within the Spring Cloud Configuration repository please, see the following instructions:
+
+1. Update your properties in the Spring Cloud Configuration repository and push them back to the repository.
+2. invoke the refresh Actuator endpoint by sending an empty HTTP POST to the client’s refresh endpoint, like this http://<IP>:<Port>/management/refresh, and then confirm it worked by reviewing the http://<IP>:<Port>/message endpoint.
+
+## Endpoints available:
 
 Jhipster Registry:
 
@@ -58,3 +70,8 @@ http://localhost:8761
 Application (Gateway):
 
 http://localhost:8080
+
+Actuators:
+
+POST: http://<IP>:<Port>/management/refresh
+GET: http://<IP>:<Port>/management/"configprops", "env", "health", "info", "threaddump"

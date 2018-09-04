@@ -15,8 +15,8 @@ services:
             - 8080:8080
     gateway-mongodb:
         image: mongo:3.6.3
-        volumes:
-            - ~/volumes/jhipster/gateway/mongodb/:/data/db/
+        # volumes:
+        #     - ~/volumes/jhipster/gateway/mongodb/:/data/db/
     
     onlineshop-app:
         image: onlineshop
@@ -31,8 +31,8 @@ services:
             - JHIPSTER_REGISTRY_PASSWORD=admin
     onlineshop-mongodb:
         image: mongo:3.6.3
-        volumes:
-            - ~/volumes/jhipster/onlineshop/mongodb/:/data/db/
+        # volumes:
+        #     - ~/volumes/jhipster/onlineshop/mongodb/:/data/db/
     
     uaa-app:
         image: uaa
@@ -46,8 +46,8 @@ services:
             - JHIPSTER_REGISTRY_PASSWORD=admin
     uaa-mysql:
         image: mysql:5.7.20
-        volumes:
-            - ~/volumes/jhipster/uaa/mysql/:/var/lib/mysql/
+        # volumes:
+        #     - ~/volumes/jhipster/uaa/mysql/:/var/lib/mysql/
         environment:
             - MYSQL_USER=root
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
@@ -57,34 +57,34 @@ services:
     
     jhipster-registry:
         extends:
-            file: jhipster-registry.yml
+            file: jhipster-registry.prod.yml
             service: jhipster-registry
 
-    jhipster-elasticsearch:
-        extends:
-            file: jhipster-console.yml
-            service: jhipster-elasticsearch
-    jhipster-logstash:
-        extends:
-            file: jhipster-console.yml
-            service: jhipster-logstash
-        depends_on:
-            - jhipster-elasticsearch
-    jhipster-console:
-        extends:
-            file: jhipster-console.yml
-            service: jhipster-console
-        depends_on:
-            - jhipster-elasticsearch
-    jhipster-import-dashboards:
-        extends:
-            file: jhipster-console.yml
-            service: jhipster-import-dashboards
-        depends_on:
-            - jhipster-elasticsearch
-    jhipster-zipkin:
-        extends:
-            file: jhipster-console.yml
-            service: jhipster-zipkin
-        depends_on:
-            - jhipster-elasticsearch
+    # jhipster-elasticsearch:
+    #     extends:
+    #         file: jhipster-console.yml
+    #         service: jhipster-elasticsearch
+    # jhipster-logstash:
+    #     extends:
+    #         file: jhipster-console.yml
+    #         service: jhipster-logstash
+    #     depends_on:
+    #         - jhipster-elasticsearch
+    # jhipster-console:
+    #     extends:
+    #         file: jhipster-console.yml
+    #         service: jhipster-console
+    #     depends_on:
+    #         - jhipster-elasticsearch
+    # jhipster-import-dashboards:
+    #     extends:
+    #         file: jhipster-console.yml
+    #         service: jhipster-import-dashboards
+    #     depends_on:
+    #         - jhipster-elasticsearch
+    # jhipster-zipkin:
+    #     extends:
+    #         file: jhipster-console.yml
+    #         service: jhipster-zipkin
+    #     depends_on:
+    #         - jhipster-elasticsearch

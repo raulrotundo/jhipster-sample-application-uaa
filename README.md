@@ -23,11 +23,6 @@ Before you can build this project, you must install and configure the following 
 2. [Yarn][]: We use Yarn to manage Node dependencies.
    Depending on your system, you can install Yarn either from source or as a pre-packaged bundle.
 
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
-
-    yarn install
-
 We use yarn scripts and [Webpack][] as our build system.
 
 Build all images using the folowing command
@@ -59,7 +54,7 @@ On startup, your gateways and microservices app will query the Registry’s conf
 To update some properties within the Spring Cloud Configuration repository please, see the following instructions:
 
 1. Update your properties in the Spring Cloud Configuration repository and push them back to the repository.
-2. invoke the refresh Actuator endpoint by sending an empty HTTP POST to the client’s refresh endpoint, like this http://<IP>:<Port>/management/refresh, and then confirm it worked by reviewing the http://<IP>:<Port>/message endpoint.
+2. invoke the refresh Actuator endpoint by sending an empty HTTP POST to the client’s refresh endpoint, like this http://"IP":"Port"/management/refresh, and then confirm it worked by reviewing the http://"IP":"Port"/message endpoint.
 
 ## Endpoints available:
 
@@ -73,6 +68,6 @@ http://localhost:8080
 
 Actuators:
 
-POST: http://<IP>:<Port>/management/refresh
+POST: http://"IP":"Port"/management/refresh
 
-GET: http://<IP>:<Port>/management/"configprops", "env", "health", "info", "threaddump"
+GET: http://"IP":"Port"/management/"configprops", "env", "health", "info", "threaddump"
